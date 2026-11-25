@@ -17,7 +17,7 @@ on:
       owner_name:
         description: Expected commit author
         type: string
-        default: Bruno Lemos de Lima
+        default: Bruno Lemos
 
 permissions:
   contents: read

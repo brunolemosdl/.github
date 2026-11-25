@@ -5,7 +5,7 @@ import unittest
 spec = importlib.util.spec_from_file_location("policy", pathlib.Path(__file__).parent.parent / "scripts" / "policy.py")
 policy = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(policy)
-OWNER = "Bruno Lemos de Lima"
+OWNER = "Bruno Lemos"
 
 
 class Policy(unittest.TestCase):
