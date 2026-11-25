@@ -1,5 +1,5 @@
 {
-  "_comment": "Repositories under the engineering standard. profile: standard (issues, pull requests, CODEOWNERS review) or vault (direct pushes; only force push and deletion blocked). checks: required status checks besides the standard's policy.",
+  "_comment": "Repositories under the engineering standard. profile: standard (issues, pull requests, CODEOWNERS review) or vault (direct pushes; only force push and deletion blocked). checks: required status checks besides the standard's policy. owner_review: false drops the CODEOWNERS review until the repository's first version (v1.0.0) is declared done by the owner; checks still apply.",
   "repos": [
     {
       "repo": "brunolemosdl/.github",
@@ -17,7 +17,8 @@
       "checks": [
         "core",
         "app"
-      ]
+      ],
+      "owner_review": false
     },
     {
       "repo": "brunolemosdl/level-description-language",
