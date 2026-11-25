@@ -1,0 +1,44 @@
+# Reusable check of the engineering standard (CONTRIBUTING.md). Each repository calls it:
+#
+#   on:
+#     pull_request:
+#       types: [opened, edited, synchronize, reopened]
+#   permissions: {contents: read}
+#   jobs:
+#     policy:
+#       uses: brunolemosdl/.github/.github/workflows/policy.yml@main
+#
+# The required status check is then "policy / check". No secrets are used.
+name: policy
+
+on:
+  workflow_call:
+    inputs:
+      owner_name:
+        description: Expected commit author
+        type: string
+        default: Bruno Lemos de Lima
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the pull request
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check out the standard
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          repository: brunolemosdl/.github
+          path: .standard
+          persist-credentials: false
+      - name: Check the pull request against the standard
+        env:
+          OWNER_NAME: ${{ inputs.owner_name }}
+        run: python3 .standard/scripts/policy.py

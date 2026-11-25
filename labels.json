@@ -1,0 +1,77 @@
+[
+  {
+    "name": "status:proposed",
+    "color": "b3a8c2",
+    "description": "Found by the agent; waits for the owner to release it"
+  },
+  {
+    "name": "status:ready",
+    "color": "9b3df0",
+    "description": "Released: may be taken"
+  },
+  {
+    "name": "status:in-progress",
+    "color": "fb8e31",
+    "description": "Someone is on it"
+  },
+  {
+    "name": "status:in-review",
+    "color": "e84fc0",
+    "description": "A pull request is open"
+  },
+  {
+    "name": "status:blocked",
+    "color": "e95904",
+    "description": "Waits on something outside"
+  },
+  {
+    "name": "status:needs-owner",
+    "color": "d73a4a",
+    "description": "Needs a decision from the owner"
+  },
+  {
+    "name": "priority:high",
+    "color": "d73a4a",
+    "description": "Take first"
+  },
+  {
+    "name": "priority:normal",
+    "color": "fbca04",
+    "description": "In order"
+  },
+  {
+    "name": "priority:low",
+    "color": "c5def5",
+    "description": "When there is time"
+  },
+  {
+    "name": "source:owner",
+    "color": "1d76db",
+    "description": "Asked by the owner"
+  },
+  {
+    "name": "source:agent",
+    "color": "5319e7",
+    "description": "Found by the agent"
+  },
+  {
+    "name": "type:feat",
+    "color": "0e8a16",
+    "description": "New functionality"
+  },
+  {
+    "name": "type:fix",
+    "color": "d73a4a",
+    "description": "Bug fix"
+  },
+  {
+    "name": "type:chore",
+    "color": "cfd3d7",
+    "description": "Maintenance, docs, refactoring, tests, CI or dependencies"
+  },
+  {
+    "name": "dependencies",
+    "color": "0366d6",
+    "description": "Dependency update (Renovate)"
+  }
+]
