@@ -42,7 +42,7 @@ def gh(method: str, path: str, body: dict | None = None, ok404: bool = False):
     return json.loads(r.stdout) if r.stdout.strip() else {}
 
 
-def ruleset(profile: str, checks: list[str]) -> dict:
+def ruleset(profile: str, checks: list[str], owner_review: bool = True) -> dict:
     rules: list[dict] = [{"type": "deletion"}, {"type": "non_fast_forward"}]
     bypass: list[dict] = []
     if profile == "standard":
@@ -50,7 +50,7 @@ def ruleset(profile: str, checks: list[str]) -> dict:
             {"type": "required_linear_history"},
             {"type": "pull_request", "parameters": {
                 "required_approving_review_count": 0, "dismiss_stale_reviews_on_push": True,
-                "require_code_owner_review": True, "require_last_push_approval": False,
+                "require_code_owner_review": owner_review, "require_last_push_approval": False,
                 "required_review_thread_resolution": True, "allowed_merge_methods": ["rebase"]}},
         ]
         if checks:
@@ -85,7 +85,7 @@ def apply(entry: dict, labels: list[dict], do: bool) -> list[str]:
                     gh("PATCH", f"repos/{repo}/labels/{lb['name'].replace(':', '%3A')}", lb)
     has_caller = gh("GET", f"repos/{repo}/contents/{CALLER}", ok404=True) is not None
     checks = ([POLICY_CHECK] if has_caller else []) + entry.get("checks", [])
-    want = ruleset(profile, checks if has_caller else [])
+    want = ruleset(profile, checks if has_caller else [], entry.get("owner_review", True))
     current = next((r for r in gh("GET", f"repos/{repo}/rulesets") if r["name"] == RULESET), None)
     if current is None:
         done.append(f"ruleset + {RULESET} ({profile}, checks: {want_checks(want) or 'none yet'})")
