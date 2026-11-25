@@ -1,21 +1,90 @@
 {
   "_comment": "Repositories under the engineering standard. profile: standard (issues, pull requests, CODEOWNERS review) or vault (direct pushes; only force push and deletion blocked). checks: required status checks besides the standard's policy.",
   "repos": [
-    {"repo": "brunolemosdl/.github", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/brunolemosdl", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/forja", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/level-description-language", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/smb-ldl-corpus", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/platformer-sim", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/request-contracts", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/contract-pcgrl", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/intent-pcgrl", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/intent-pcgrl-demo", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/intent-pcgrl-aiide26", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/quadruped-rl-genesis", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/coppeliasim-dynamic-navigation-benchmark", "profile": "standard", "checks": []},
-    {"repo": "brunolemosdl/second-brain", "profile": "vault", "checks": []},
-    {"repo": "tenebris-forge/arcaforge", "profile": "standard", "checks": []},
-    {"repo": "tenebris-forge/.github", "profile": "standard", "checks": []}
+    {
+      "repo": "brunolemosdl/.github",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/brunolemosdl",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/forja",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/level-description-language",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/smb-ldl-corpus",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/platformer-sim",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/request-contracts",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/contract-pcgrl",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/intent-pcgrl",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/intent-pcgrl-demo",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/intent-pcgrl-aiide26",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/quadruped-rl-genesis",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/coppeliasim-dynamic-navigation-benchmark",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "brunolemosdl/second-brain",
+      "profile": "vault",
+      "checks": []
+    },
+    {
+      "repo": "tenebris-forge/arcaforge",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "tenebris-forge/.github",
+      "profile": "standard",
+      "checks": []
+    },
+    {
+      "repo": "tenebris-forge/brand-kit",
+      "profile": "standard",
+      "checks": []
+    }
   ]
 }
