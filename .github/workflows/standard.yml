@@ -15,4 +15,4 @@ jobs:
         with:
           persist-credentials: false
       - name: Test the policy check
-        run: python3 -m unittest -v tests/test_policy.py
+        run: python3 -m unittest -v tests/test_policy.py tests/test_brandkit.py
