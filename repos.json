@@ -14,7 +14,10 @@
     {
       "repo": "brunolemosdl/forja",
       "profile": "standard",
-      "checks": []
+      "checks": [
+        "core",
+        "app"
+      ]
     },
     {
       "repo": "brunolemosdl/level-description-language",
